@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Илья Карпов">
+    <meta name="description" content="Сервис, в котором можно найти новости по запросу и сохранить в личном кабинете">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.e79c241b0ee076ff15268b0550835a85.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.ce91022079aeffb98918481f1d8bc9cf.png">
+    <link rel="stylesheet" href="index.732882259b07519cedd1.css">
+    <title>Поиск новостей</title>
+</head>
+
+<body class="root index">
+
+    <section class="search search_bg">
+        <header class="header">
+            <div class="header__wrapper root_wrapper">
+                <a href="#" class="link logo">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="logo__img logo__img_geometry">
+                        <path d="M15.0627 31.9497V25.147C13.3591 25.2119 11.6719 25.4521 10.0664 25.8503C10.325 26.4751 10.6079 27.0735 10.9143 27.6384C12.1372 29.8918 13.657 31.4495 15.0627 31.9497V31.9497Z"/>
+                        <path d="M21.0859 27.6384C21.3923 27.0737 21.6753 26.4751 21.9338 25.8503C20.3284 25.4521 18.6411 25.2119 16.9375 25.147V31.9497C18.3433 31.4495 19.863 29.8918 21.0859 27.6384Z"/>
+                        <path d="M15.0625 23.2708V17.0322H8.22559C8.31104 19.4678 8.72656 21.8892 9.42236 24.0813C11.2336 23.6167 13.1409 23.3391 15.0625 23.2708V23.2708Z"/>
+                        <path d="M16.9375 17.0322V23.2708C18.8594 23.3394 20.7664 23.6167 22.5776 24.0813C23.2734 21.8892 23.689 19.4678 23.7747 17.0322H16.9375Z"/>
+                        <path d="M7.61743 24.6174C6.86792 22.2576 6.43237 19.6748 6.34863 17.0322H0C0.205322 20.5747 1.56616 23.8118 3.71045 26.3718C4.90479 25.6787 6.22144 25.0903 7.61743 24.6174Z"/>
+                        <path d="M23.7471 26.3792C23.4426 27.1287 23.1047 27.8489 22.7336 28.533C22.1292 29.647 21.4658 30.6077 20.7646 31.3999C23.1055 30.6697 25.217 29.4153 26.9629 27.7759C25.9685 27.2317 24.8875 26.7637 23.7471 26.3792V26.3792Z"/>
+                        <path d="M8.25268 26.3792C7.1123 26.7637 6.03125 27.2317 5.03711 27.7759C6.78271 29.4155 8.89429 30.6697 11.2351 31.4001C10.5342 30.6077 9.87085 29.647 9.26611 28.533C8.89477 27.8489 8.55688 27.1287 8.25268 26.3792Z"/>
+                        <path d="M24.3828 24.6174C25.7788 25.0903 27.0955 25.6785 28.2898 26.3716C30.4341 23.8115 31.7949 20.5745 32.0002 17.0322H25.6516C25.5679 19.6748 25.1323 22.2576 24.3828 24.6174V24.6174Z"/>
+                        <path d="M15.0625 14.9175V8.67896C13.1409 8.6106 11.2336 8.33301 9.42236 7.86865C8.72656 10.0608 8.31104 12.4819 8.22559 14.9175H15.0625Z"/>
+                        <path d="M23.7471 5.57056C24.8875 5.18604 25.9685 4.71802 26.9626 4.17383C25.217 2.53442 23.1055 1.28003 20.7646 0.549805C21.4658 1.34204 22.1292 2.30298 22.7336 3.41699C23.105 4.10083 23.4429 4.82104 23.7471 5.57056Z"/>
+                        <path d="M10.9143 4.31128C10.6079 4.87622 10.325 5.47461 10.0664 6.09937C11.6719 6.49756 13.3591 6.73779 15.0627 6.80273V0C13.657 0.500244 12.1372 2.05786 10.9143 4.31128Z"/>
+                        <path d="M16.9375 8.67896V14.9175H23.7744C23.689 12.4819 23.2734 10.0608 22.5776 7.86865C20.7664 8.33301 18.8594 8.6106 16.9375 8.67896Z"/>
+                        <path d="M24.3828 7.33228C25.1323 9.69214 25.5679 12.2749 25.6516 14.9175H32.0002C31.7949 11.375 30.4341 8.13818 28.2898 5.57812C27.0955 6.27124 25.7788 6.85938 24.3828 7.33228V7.33228Z"/>
+                        <path d="M16.9375 0V6.80273C18.6411 6.73779 20.3284 6.49756 21.9338 6.09961C21.6753 5.47461 21.3926 4.87622 21.0859 4.31128C19.863 2.05786 18.3433 0.500244 16.9375 0Z"/>
+                        <path d="M7.61743 7.33228C6.22144 6.85938 4.90479 6.27124 3.71045 5.57812C1.56592 8.13818 0.205322 11.3752 0 14.9175H6.34863C6.43237 12.2749 6.86792 9.69214 7.61743 7.33228Z"/>
+                        <path d="M8.25293 5.57056C8.55737 4.82104 8.89526 4.10083 9.26636 3.41699C9.87085 2.30273 10.5342 1.34204 11.2354 0.549805C8.89453 1.28003 6.78296 2.53442 5.03711 4.17383C6.03149 4.71802 7.11255 5.18603 8.25293 5.57056Z"/>
+                    </svg>
+                    Поиск новостей
+                </a>
+
+                <div class="header__menu">
+                    <div class="header__link-wrapper header__link-geometry">
+                        <a href="/" class="link header__link">Главная</a>
+                    </div>
+
+                    <a href="#" class="link link_border header__link-geometry header__link">Авторизация</a>
+                </div>
+
+                <div class="burger">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search__wrapper root_wrapper">
+            <div class="search__container search__container_geometry">
+                <h1 class="title search__title">Что в мире творится?</h1>
+                <p class="description search__description search__description_geometry">Находите самые свежие статьи на любую тему и сохраняйте в своём
+                    личном кабинете.</p>
+
+                <form class="search__form">
+                    <input type="text" class="input input_search search__input" placeholder="Еще не ввел текст">
+                    <button type="submit" class="button button_flat-round search__button">Искать</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <main class="articles">
+        <div class="articles__wrapper root_wrapper articles__wrapper_geometry">
+            <h2 class="title articles__title">Что в мире творится?</h2>
+
+            <div class="articles__content">
+                <div class="post">
+                    <div class="post__navigation">
+                        <div class="tooltip tooltip_message post__btn" data-tooltip="Войдите, чтобы сохранять статьи">
+                            <svg class="post__icon" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0 1C0 0.447715 0.447715 0 1 0H13C13.5523 0 14 0.447715 14 1V19L7 13.5L0 19V1ZM12 2H2V15L7 11L12 15V2Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <img src="./images/placeholder.b0ce00078da9ac943d12356faa7feae3.svg" alt="" class="post__img">
+                    <div class="post__content">
+                        <time class="post__date" datetime="2020-05-15">15 мая, 2020</time>
+                        <h3 class="title post__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
+                            maiores, maxime. Consequatur earum ipsam, labore, pariatur provident quas, quibusdam saepe sed
+                            sequi tempore veritatis vitae?</h3>
+                        <p class="description post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aperiam
+                            beatae doloribus eius eligendi error est fuga in ipsam iusto labore, laborum magnam
+                            necessitatibus nihil
+                            officiis quae quaerat quo quod recusandae.</p>
+                        <a href="#" class="link post__source">ЛЕНТА.РУ</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__navigation">
+                        <div class="tooltip tooltip_message post__btn" data-tooltip="Войдите, чтобы сохранять статьи">
+                            <svg class="post__icon" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0 1C0 0.447715 0.447715 0 1 0H13C13.5523 0 14 0.447715 14 1V19L7 13.5L0 19V1ZM12 2H2V15L7 11L12 15V2Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <img src="./images/placeholder.b0ce00078da9ac943d12356faa7feae3.svg" alt="" class="post__img">
+                    <div class="post__content">
+                        <time class="post__date" datetime="2020-05-15">15 мая, 2020</time>
+                        <h3 class="title post__title">New Post</h3>
+                        <p class="description post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aliquam dolore, dolores eligendi eos, esse excepturi iusto nam quae quam, rem tenetur velit
+                            voluptates voluptatibus? Doloribus minus praesentium repudiandae tempora unde. Alias illum
+                            nostrum omnis placeat repellat. Alias atque exercitationem facilis in magnam nostrum, sequi sit.
+                            Cumque deleniti facilis non voluptas?</p>
+                        <a href="#" class="link post__source">ЛЕНТА.РУ</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__navigation">
+                        <div class="tooltip tooltip_message post__btn" data-tooltip="Войдите, чтобы сохранять статьи">
+                            <svg class="post__icon" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0 1C0 0.447715 0.447715 0 1 0H13C13.5523 0 14 0.447715 14 1V19L7 13.5L0 19V1ZM12 2H2V15L7 11L12 15V2Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <img src="./images/placeholder.b0ce00078da9ac943d12356faa7feae3.svg" alt="" class="post__img">
+                    <div class="post__content">
+                        <time class="post__date" datetime="2020-05-15">15 мая, 2020</time>
+                        <h3 class="title post__title">New Post</h3>
+                        <p class="description post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aperiam
+                            beatae doloribus eius eligendi error est fuga in ipsam iusto labore, laborum magnam
+                            necessitatibus nihil
+                            officiis quae quaerat quo quod recusandae.</p>
+                        <a href="#" class="link post__source">ЛЕНТА.РУ</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__navigation">
+                        <div class="tooltip tooltip_message post__btn" data-tooltip="Войдите, чтобы сохранять статьи">
+                            <svg class="post__icon" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0 1C0 0.447715 0.447715 0 1 0H13C13.5523 0 14 0.447715 14 1V19L7 13.5L0 19V1ZM12 2H2V15L7 11L12 15V2Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <img src="./images/placeholder.b0ce00078da9ac943d12356faa7feae3.svg" alt="" class="post__img">
+                    <div class="post__content">
+                        <time class="post__date" datetime="2020-05-15">15 мая, 2020</time>
+                        <h3 class="title post__title">New Post</h3>
+                        <p class="description post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aperiam
+                            beatae doloribus eius eligendi error est fuga in ipsam iusto labore, laborum magnam
+                            necessitatibus nihil
+                            officiis quae quaerat quo quod recusandae.</p>
+                        <a href="#" class="link post__source">ЛЕНТА.РУ</a>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post__navigation">
+                        <div class="tooltip tooltip_message post__btn" data-tooltip="Войдите, чтобы сохранять статьи">
+                            <svg class="post__icon" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M0 1C0 0.447715 0.447715 0 1 0H13C13.5523 0 14 0.447715 14 1V19L7 13.5L0 19V1ZM12 2H2V15L7 11L12 15V2Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <img src="./images/placeholder.b0ce00078da9ac943d12356faa7feae3.svg" alt="" class="post__img">
+                    <div class="post__content">
+                        <time class="post__date" datetime="2020-05-15">15 мая, 2020</time>
+                        <h3 class="title post__title">New Post</h3>
+                        <p class="description post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aperiam
+                            beatae doloribus eius eligendi error est fuga in ipsam iusto labore, laborum magnam
+                            necessitatibus nihil
+                            officiis quae quaerat quo quod recusandae.</p>
+                        <a href="#" class="link post__source">ЛЕНТА.РУ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preloader">
+                <i class="preloader__load"></i>
+                <p class="description preloader__description">Идет поиск новостей...</p>
+            </div>
+
+            <div class="not-found">
+                <img src="./images/not-found.6cfcc2c06cbedef8d04e2ea70e35dd54.svg" alt="Ничего не смог найти" class="not-found__img">
+                <h3 class="title not-found__title">Ничего не найдено</h3>
+                <p class="description not-found__description">К сожалению по вашему запросу
+                    ничего не найдено.</p>
+            </div>
+
+            <button type="submit" class="button button_flat-round articles__button">Показать ещё</button>
+        </div>
+    </main>
+
+    <section class="about">
+        <div class="about__wrapper root_wrapper">
+            <img src="./images/me.adb6960c8176e4b2ccd04a11a00d37ba.jpg" alt="Илья Карпов" class="about__img">
+
+            <div class="about__content">
+                <h2 class="title about__title">Об авторе</h2>
+                <p class="description about__description">Это блок с описанием автора проекта. Здесь следует указать, как
+                    вас
+                    зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                <p class="description about__description">Также можно рассказать о процессе обучения в Практикуме, чему вы
+                    тут
+                    научились, и чем можете помочь потенциальным заказчикам.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__wrapper root_wrapper">
+            <p class="description footer__copyright">© 2020 Super site, Powered by News API</p>
+
+            <div class="footer__menu">
+                <a href="#" class="link footer__link">Главная</a>
+                <a href="#" class="link footer__link">Яндекс.Практикум</a>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="link footer__smm">
+                    <img src="./images/github.28765d8e8dd801ec297a61aa9e64a990.svg" alt="GitHub" class="footer__icon">
+                </a>
+                <a href="#" class="link footer__smm">
+                    <img src="./images/facebook.400b31da08bea4d92e859c0373e85f8b.svg" alt="Facebook" class="footer__icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay overlay_popup">
+        <div class="popup">
+            <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" class="popup__close">
+                <path d="M3 0L0 3L8.5 11.5L0 20L3 23L11.5 14.5L20 23L23 20L14.5 11.5L23 3L20 0L11.5 8.5L3 0Z"/>
+            </svg>
+
+            <h4 class="popup__title">Регистрация</h4>
+
+            <form action="" method="post" class="popup__form">
+                <label for="email" class="popup__label">Email
+                    <input type="email" class="popup__input" name="email" id="email" placeholder="Введите свою почту">
+                    <span class="popup__error">Неправильный формат email</span>
+                </label>
+                <label for="password" class="popup__label">Пароль
+                    <input type="password" class="popup__input" name="password" id="password" placeholder="Введите пароль">
+                    <span class="popup__error">Неправильный формат пароля</span>
+                </label>
+                <label for="name" class="popup__label">Имя
+                    <input type="text" class="popup__input" name="name" id="name" placeholder="Введите своё имя">
+                    <span class="popup__error">&nbsp;</span>
+                </label>
+
+                <span class="popup__error popup__error_geometry">Такой пользователь уже есть</span>
+                <button class="button button_disabled popup__button" type="submit">Зарегистрироваться</button>
+            </form>
+            <span class="popup__text">или <a href="#" class="link popup__link">Войти</a></span>
+        </div>
+    </div>
+
+<!-- Подключение js файла -->
+<script src="index.a19fb3726912799f31ea.js"></script>
+</body>
+</html>

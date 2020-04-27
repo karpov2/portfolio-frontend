@@ -1,0 +1,28 @@
+.footer__link {
+    font-size: 1.125em;
+    color: var(--color-main);
+    margin-right: 2em;
+}
+
+.footer__link:last-of-type {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .footer__link {
+        margin-right: calc((100vw - 42.6em) / (55.5 - 42.6) * (2 - .9) + .9em);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__link {
+        margin-right: .9em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer__link {
+        margin-bottom: 1em;
+    }
+}

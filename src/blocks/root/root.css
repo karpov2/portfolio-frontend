@@ -1,0 +1,35 @@
+.root {
+    /* Общие */
+    /* Основной цвет шрифта, заголовков, параграфов */
+    --color-main: #1A1B22;
+    /* Дополнительный цвет шрифта, дат, источника */
+    --color-assistant: #B6BCBF;
+    /* Ярий цвет для события, кнопки */
+    --color-event: #2F71E5;
+    /* Основной белый цвет */
+    --color-white: #fff;
+
+    margin: 0;
+    position: relative;
+}
+
+.root_wrapper {
+    --root-padding: 2.5em;
+    --root-max-size: 1232px;
+    max-width: calc(var(--root-max-size) + (var(--root-padding) * 2));
+    padding-left: var(--root-padding);
+    padding-right: var(--root-padding);
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .root_wrapper {
+        --root-padding: calc((100vw - 20em)/(48 - 20) * (2.5 - 1) + 1em);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .root_wrapper {
+        --root-padding: 1em;
+    }
+}

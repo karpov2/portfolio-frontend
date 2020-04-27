@@ -1,0 +1,19 @@
+.popup__close {
+    --popup-close-size: 2.5em;
+    width: var(--popup-close-size);
+    height: var(--popup-close-size);
+    padding: .5em;
+    box-sizing: border-box;
+    fill: #fff;
+    object-fit: contain;
+    position: absolute;
+    top: -2.8em;
+    right: -2.8em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .popup__close {
+        display: none;
+    }
+}

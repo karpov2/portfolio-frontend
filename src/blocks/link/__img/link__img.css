@@ -1,0 +1,12 @@
+@import url(./_geometry/link__img_geometry.css);
+
+.link__img {
+    --link-exit-size: 1em;
+    width: var(--link-exit-size);
+    height: var(--link-exit-size);
+    object-fit: contain;
+}
+
+.link_border:hover .link__img {
+    fill: var(--header-link-color-hover);
+}

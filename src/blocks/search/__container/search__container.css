@@ -1,0 +1,5 @@
+@import url(./search__container_geometry.css);
+
+.search__container {
+    max-width: var(--search-container-maxsize);
+}

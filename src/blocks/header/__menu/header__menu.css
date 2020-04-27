@@ -1,0 +1,19 @@
+.header__menu {
+    display: flex;
+}
+
+@media screen and (max-width: 700px) {
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        border-bottom: var(--header-border) solid rgba(var(--header-border-color));
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: var(--root-padding);
+        border-radius: 0 0 1em 1em;
+        background-color: var(--header-link-color-hover);
+        z-index: 1;
+    }
+}

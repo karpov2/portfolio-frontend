@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Roboto';
+    src:
+        local('Roboto Regular'), local('Roboto-Regular'),
+        url('roboto/Roboto-Regular.woff2') format('woff2'),
+        url('roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        local('Roboto Medium'), local('Roboto-Medium'),
+        url('roboto/Roboto-Medium.woff2') format('woff2'),
+        url('roboto/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        local('Roboto Black'), local('Roboto-Black'),
+        url('roboto/Roboto-Black.woff2') format('woff2'),
+        url('roboto/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src:
+        local('RobotoSlab Regular'), local('RobotoSlab-Regular'),
+        url('roboto/RobotoSlab-Regular.woff2') format('woff2'),
+        url('roboto/RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src:
+        local('SourceSansPro Regular'), local('SourceSansPro-Regular'),
+        url('source-sans-pro/SourceSansPro-Regular.woff2') format('woff2'),
+        url('source-sans-pro/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src:
+        local('Inter Regular'), local('Inter-Regular'),
+        url('inter/Inter-Regular.woff2') format('woff2'),
+        url('inter/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,15 @@
+.search__form {
+    display: flex;
+    --search-border: .06em;
+    border: var(--search-border) solid #D1D2D6;
+    background-color: #fff;
+    border-radius: 2em;
+}
+
+@media screen and (max-width: 700px) {
+    .search__form {
+        flex-direction: column;
+        background-color: transparent;
+        border: none;
+    }
+}

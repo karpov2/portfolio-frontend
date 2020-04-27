@@ -1,0 +1,12 @@
+@import url(./search__description_assistant.css);
+@import url(./search__description_geometry.css);
+
+.search__description {
+    color: var(--search-text-color);
+    font-size: 1.125em;
+    margin-top: 0;
+}
+
+.search__description:last-child {
+    margin-bottom: 0;
+}

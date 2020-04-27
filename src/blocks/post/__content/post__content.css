@@ -1,0 +1,20 @@
+.post__content {
+    padding: calc(var(--post-padding) - .25em) var(--post-padding);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 300px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .post__content {
+        --post-padding: calc((100vw - 48em) / (62.5 - 48) * (1.5 - 1) + 1em);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post__content {
+        --post-padding: 1em;
+    }
+}

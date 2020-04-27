@@ -1,0 +1,6 @@
+@import url(./_geometry/articles__wrapper_geometry.css);
+
+.articles__wrapper {
+    display: flex;
+    flex-direction: column;
+}

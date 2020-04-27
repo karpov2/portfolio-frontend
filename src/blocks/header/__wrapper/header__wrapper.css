@@ -1,0 +1,7 @@
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--header-padding);
+    padding-bottom: var(--header-padding);
+}

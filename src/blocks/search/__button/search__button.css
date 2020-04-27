@@ -1,0 +1,28 @@
+.search__button {
+    color: #fff;
+    font-size: 1.125em;
+    padding: 1em 3em;
+    background-color: #2F71E5;
+    box-shadow: 0 .27em .83em rgba(14, 26, 57, .2);
+    margin: calc(var(--search-border) * -1);
+}
+
+.search__button:hover {
+    background-color: #347EFF;
+}
+
+.search__button:focus {
+    background-color: #2A65CC;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px){
+    .search__button {
+        padding: calc((100vw - 48em)/(62.5 - 48) * (1 - .8) + .8em) 3em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search__button {
+        padding: .8em 3em;
+    }
+}

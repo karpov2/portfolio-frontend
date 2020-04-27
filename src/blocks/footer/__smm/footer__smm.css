@@ -1,0 +1,8 @@
+.footer__smm {
+    display: flex;
+    margin-left: 1.5em;
+}
+
+.footer__smm:first-of-type {
+    margin-left: 0;
+}

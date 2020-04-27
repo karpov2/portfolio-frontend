@@ -1,0 +1,47 @@
+.tooltip_message {}
+
+.tooltip_message[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip_message[data-tooltip]::after {
+    content: attr(data-tooltip);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    top: 0;
+    margin-right: .3em;
+    white-space: nowrap;
+    font-size: .75em;
+    color: var(--color-main);
+    padding: .6em .8em;
+    text-align: right;
+    box-sizing: border-box;
+    z-index: 2;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity .3s, transform .2s;
+}
+
+.tooltip_message[data-tooltip]:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 850px) {
+    .tooltip_message[data-tooltip]::after {
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tooltip_message[data-tooltip]::after {
+        display: none;
+    }
+}

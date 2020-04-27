@@ -1,0 +1,20 @@
+.search__title {
+    color: var(--search-text-color);
+    font-size: calc(var(--search-title-size) * 1em);
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .search__title {
+        font-size: calc((100vw - 48em)/(62.5 - 48) * (var(--search-title-size) - var(--search-title-msize)) + var(--search-title-msize) * 1em );
+        margin-bottom: calc((100vw - 48rem)/(62.5 - 48) * (2 - 1) + 1rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search__title {
+        font-size: calc(var(--search-title-msize) * 1em);
+        margin-bottom: 1rem;
+    }
+}

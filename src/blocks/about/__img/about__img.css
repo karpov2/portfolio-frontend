@@ -1,0 +1,32 @@
+.about__img {
+    --img-size: 29em;
+    width: var(--img-size);
+    height: var(--img-size);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+    .about__img {
+        --img-size: calc((100vw - 43.75em)/(62.5 - 43.75) * (29 - 14.5) + 14.5em);
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 320px) {
+    .about__img {
+        --img-size: calc((100vw - 20em)/(43.75 - 20) * (14.5 - 17) + 17em);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about__img {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about__img {
+        --img-size: 17em;
+        width: 100%;
+    }
+}

@@ -1,0 +1,19 @@
+.burger__line {
+    width: 1.5em;
+    height: .15em;
+    background-color: var(--header-link-color);
+    margin-bottom: .4em;
+    transition: transform .5s cubic-bezier(.77, .2, .05, 1);
+}
+
+.burger__line:last-child {
+    margin-bottom: 0;
+}
+
+.burger:hover .burger__line:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+}
+
+.burger:hover .burger__line:nth-child(2) {
+    transform: rotate(-45deg) translate(3px, -3px);
+}

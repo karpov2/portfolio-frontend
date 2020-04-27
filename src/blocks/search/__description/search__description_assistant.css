@@ -1,0 +1,16 @@
+.search__description_assistant {
+    opacity: .5;
+    margin-bottom: 1.75em;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 320px) {
+    .search__description_assistant {
+        margin-bottom: calc((100vw - 20em)/(62.5 - 20) * (1.75 - 1) + 1em);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search__description_assistant {
+        margin-bottom: 1em;
+    }
+}

@@ -1,0 +1,12 @@
+.footer__menu {
+    grid-area: menu;
+    justify-self: end;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__menu {
+        justify-self: start;
+        flex-wrap: wrap;
+    }
+}

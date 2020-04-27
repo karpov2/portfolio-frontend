@@ -1,0 +1,17 @@
+.post__tooltip-message {
+    text-align: right;
+    margin-right: .3em;
+    margin-left: .3em;
+    /*position: absolute;*/
+    /*right: 100%;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+}
+
+@media screen and (max-width: 768px) {
+    .post__tooltip-message {
+        /*display: none;*/
+        /*overflow: hidden;*/
+        /*visibility: hidden;*/
+    }
+}

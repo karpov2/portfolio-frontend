@@ -1,0 +1,7 @@
+@import url(./logo__img_geometry.css);
+
+.logo__img {
+    fill: var(--header-link-color);
+    width: 1.5em;
+    height: 1.5em;
+}

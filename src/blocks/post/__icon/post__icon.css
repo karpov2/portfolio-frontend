@@ -1,0 +1,17 @@
+.post__icon {
+    display: block;
+    object-fit: contain;
+    width: 2.5em;
+    height: 2.5em;
+    padding: .6em;
+    box-sizing: border-box;
+    fill: var(--color-assistant);
+}
+
+.post__btn:hover .post__icon {
+    fill: var(--color-main);
+}
+
+.post__btn:active .post__icon {
+    fill: var(--color-event);
+}

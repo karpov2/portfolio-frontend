@@ -11,14 +11,13 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
     // Точка входа (откуда брать файл)
     entry: {
-        main: './src/app/index.js',
+        index: './src/app/index.js',
         article: './src/app/article.js'
     },
     // Точка выхода (куда будут записываться фалы)
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js',
-        publicPath: '/'
+        filename: './js/[name].[chunkhash].js'
     },
 
     // Правила обработки файлов при сборке
@@ -31,7 +30,13 @@ module.exports = {
             },
             {
                 test: /\.css$/i, // применять это правило только к CSS-файлам
-                use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), // в правилах укажите, что если вы собираете в режиме dev, то плагин MiniCssExtractPlugin загружать не нужно.
+                use: [
+                    (isDev ? 'style-loader' : {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    }), // в правилах укажите, что если вы собираете в режиме dev, то плагин MiniCssExtractPlugin загружать не нужно.
                     'css-loader',
                     'postcss-loader'
                 ]
@@ -42,7 +47,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: './images/[name].[ext]', // указали папку, куда складывать изображения
+                            name: './images/[name].[contenthash].[ext]', // указали папку, куда складывать изображения
                             esModule: false
                         }
                     },
@@ -58,14 +63,14 @@ module.exports = {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: './vendor/[name].[ext]', // указали папку, куда складывать шрифты
+                    name: './vendor/fonts/[name].[ext]', // указали папку, куда складывать шрифты
                 }
             }
         ]
     },
 
     plugins: [
-        new MiniCssExtractPlugin({filename: 'style.[contenthash].css'}),
+        new MiniCssExtractPlugin({filename: './style/[name].[contenthash].css'}),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
@@ -79,7 +84,7 @@ module.exports = {
             inject: false, // стили НЕ нужно прописывать внутри тегов
             template: './src/index.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'index.html', // имя выходного файла, то есть того, что окажется в папке dist после сборки
-            chunks: ['main']
+            chunks: ['index']
         }),
         new HtmlWebpackPlugin({
             // Означает, что:

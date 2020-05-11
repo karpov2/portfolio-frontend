@@ -1,0 +1,27 @@
+@import url(./__img/post__img.css);
+@import url(./__content/post__content.css);
+@import url(./__title/post__title.css);
+@import url(./__description/post__description.css);
+@import url(./__navigation/post__navigation.css);
+@import url(./__btn/post__btn.css);
+@import url(./__icon/post__icon.css);
+@import url(__tooltip-message/post__tooltip-message.css);
+@import url(./__date/post__date.css);
+@import url(./__source/post__source.css);
+
+.post {
+    --post-padding: 1.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    /*overflow: hidden;*/
+    background-color: #fff;
+    border: 1px solid #ecf0f2;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.post:hover {
+    box-shadow: 0 .5em 3.6em calc(var(--post-padding) * -1) rgba(8, 29, 45, .1);
+}

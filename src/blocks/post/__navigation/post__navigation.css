@@ -1,0 +1,21 @@
+.post__navigation {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: flex-start;*/
+    position: absolute;
+    top: var(--post-padding);
+    right: var(--post-padding);
+    left: var(--post-padding);
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .post__navigation {
+        --post-padding: calc((100vw - 48em) / (62.5 - 48) * (1.5 - 1) + 1em);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post__navigation {
+        --post-padding: 1em;
+    }
+}

@@ -1,0 +1,9 @@
+@import url(./popup__error_geometry.css);
+
+.popup__error {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.3;
+    color: #FF0000;
+    font-size: .75rem;
+}

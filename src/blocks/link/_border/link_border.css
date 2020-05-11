@@ -1,0 +1,20 @@
+.link_border {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .06em solid var(--header-link-color);
+    border-radius: 2em;
+    padding: .6em 1em;
+    transition: background-color .2s;
+}
+
+.link_border:hover {
+    background-color: var(--header-link-color);
+    color: var(--header-link-color-hover);
+}
+
+@media screen and (max-width: 700px) {
+    .link_border {
+        padding: .15em 1em;
+    }
+}

@@ -1,0 +1,8 @@
+.popup__label {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.3;
+    color: var(--color-event);
+    font-size: .75rem;
+    margin-bottom: 1em;
+}

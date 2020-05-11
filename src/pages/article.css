@@ -1,0 +1,46 @@
+@import url(../vendors/fonts/fonts.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/burger/burger.css);
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/title/title.css);
+@import url(../blocks/description/description.css);
+@import url(../blocks/input/input.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/articles/articles.css);
+@import url(../blocks/post/post.css);
+@import url(../blocks/tooltip/tooltip.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/not-found/not-found.css);
+
+.article {
+    /* Header */
+    /* Цвет рамки */
+    --header-border-color: 209, 210, 214, 1;
+    /* Размер рамки */
+    --header-border: .06em;
+    /* Цвет фона */
+    --header-bg: 255, 255, 255, 1;
+    /* Цвет ссылок */
+    --header-link-color: var(--color-main);
+    --header-link-color-hover: var(--color-white);
+
+    /* Search */
+    /* Отступ контейнера */
+    --search-wrapper-geometry: 2.5em;
+    /* Цвет шрифта */
+    --search-text-color: var(--color-main);
+    /* Размер заголовка */
+    --search-title-size: 2.5;
+    --search-title-msize: 1.875;
+    /* Максимальная ширина контейнера */
+    --search-container-maxsize: 530px;
+
+    /* Articles */
+    /* Отступ контейнера */
+    --articles-wrapper-geometry: 2.5em;
+}

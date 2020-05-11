@@ -1,0 +1,7 @@
+.post__description {
+    font-size: 1em;
+    color: var(--color-main);
+    margin-bottom: 1.125em;
+    margin-top: 0;
+    overflow: hidden;
+}

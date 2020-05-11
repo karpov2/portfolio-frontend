@@ -1,0 +1,17 @@
+.header__link-geometry {
+    margin-left: 1.125em;
+}
+
+.header__link-geometry:first-child {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .header__link-geometry {
+        margin-left: 0;
+    }
+
+    .header__link-geometry:last-child {
+        margin-top: 1.375em;
+    }
+}

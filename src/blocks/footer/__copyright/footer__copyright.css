@@ -1,0 +1,8 @@
+.footer__copyright {
+    grid-area: copyright;
+    font-size: 1em;
+    color: var(--color-assistant);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+}

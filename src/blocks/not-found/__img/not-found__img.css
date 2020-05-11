@@ -1,0 +1,6 @@
+.not-found__img {
+    width: 5em;
+    height: 5em;
+    object-fit: contain;
+    margin-bottom: 2em;
+}

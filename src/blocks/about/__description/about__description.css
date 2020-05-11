@@ -1,0 +1,10 @@
+.about__description {
+    font-size: 1.125em;
+    color: var(--color-main);
+    margin-bottom: 1.3em;
+    margin-top: 0;
+}
+
+.about__description:last-child {
+    margin-bottom: 0;
+}

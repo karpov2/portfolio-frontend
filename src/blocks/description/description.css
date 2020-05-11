@@ -1,0 +1,8 @@
+@import url(./description_bolt.css);
+
+.description {
+    --line-height: 1.3;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: var(--line-height);
+}

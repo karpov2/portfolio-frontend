@@ -1,0 +1,8 @@
+.tooltip__categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .875em;
+    color: var(--color-main);
+    padding: .6em .8em;
+}

@@ -1,0 +1,5 @@
+.button_disabled {
+    background-color: #E6E8EB;
+    color: var(--color-assistant);
+    border-width: 0;
+}

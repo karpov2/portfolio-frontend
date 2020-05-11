@@ -1,0 +1,27 @@
+.preloader__load {
+    --preloader-size: 3.5em;
+    --preloader-border: .1em;
+    box-sizing: border-box;
+    width: var(--preloader-size);
+    height: var(--preloader-size);
+    border-radius: 50%;
+    border: var(--preloader-border) solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+.preloader__load:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0 var(--preloader-border) var(--color-main);
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}

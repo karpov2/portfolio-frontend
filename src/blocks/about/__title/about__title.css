@@ -1,0 +1,20 @@
+.about__title {
+    font-size: 2.5em;
+    color: var(--color-main);
+    margin-bottom: .6em;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .about__title {
+        font-size: calc((100vw - 48em)/(62.5 - 48) * (2.5 - 1.875) + 1.875em);
+        margin-bottom: calc((100vw - 19.2em)/(25 - 19.2) * (.6 - .5) + .5em);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about__title {
+        font-size: 1.875em;
+        margin-bottom: .5em;
+    }
+}

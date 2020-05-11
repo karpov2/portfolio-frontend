@@ -4,20 +4,22 @@
 
 import '../pages/article.css';
 import shave from 'shave';
-import { Header } from './component/header/header.js'
+import { Header } from './component/header/Header.js'
+import { Event } from './component/event/Event.js'
 // import { Post } from './component/post/post.js'
 
-// const post = new Post(document.querySelectorAll('.post__description'));
+/**
+ * Подключение компонентов
+ */
 
+// const post = new Post(document.querySelectorAll('.post__description'));
 const posts = document.querySelectorAll('.post__description');
 
 const header = new Header({
-    link: document.querySelectorAll('.header__link-wrapper .link')
+    link: '.header__link-wrapper'
 });
 
-/**
- * Перебирает каждую статью и если текст (description) больше доступной высоты, текст обрезается
- */
+// Перебирает каждую статью и если текст (description) больше доступной высоты, текст обрезается
 const ellipsis = () => {
     /**
      * Доступ до значения свойств классов елемента
@@ -48,11 +50,15 @@ const ellipsis = () => {
     });
 }
 
-window.addEventListener('load', () => {
-    header.activeLink();
-    ellipsis();
-})
+/**
+ * Подключение событий
+ */
 
-window.addEventListener('resize', () => {
-    ellipsis();
-})
+const event = new Event();
+
+event.addEvent(window, 'load', [
+    header.activeLink(),
+    ellipsis()
+])
+
+event.addEvent(window, 'resize', ellipsis())

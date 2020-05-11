@@ -40,13 +40,13 @@
                     Поиск новостей
                 </a>
 
-                <div class="header__menu">
-                    <nav class="header__link-wrapper header__link-geometry">
+                <nav class="header__menu">
+                    <div class="header__link-wrapper header__link-geometry">
                         <a href="/" class="link header__link">Главная</a>
-                    </nav>
+                    </div>
 
-                    <a href="#" class="link link_border header__link-geometry header__link">Авторизация</a>
-                </div>
+                    <button type="button" id="signup" class="button button_border header__link-geometry header__link">Авторизация</button>
+                </nav>
 
                 <div class="burger">
                     <div class="burger__line"></div>
@@ -243,35 +243,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="overlay overlay_popup">
-        <div class="popup">
-            <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" class="popup__close">
-                <path d="M3 0L0 3L8.5 11.5L0 20L3 23L11.5 14.5L20 23L23 20L14.5 11.5L23 3L20 0L11.5 8.5L3 0Z"/>
-            </svg>
-
-            <h4 class="popup__title">Регистрация</h4>
-
-            <form action="" method="post" class="popup__form">
-                <label for="email" class="popup__label">Email
-                    <input type="email" class="popup__input" name="email" id="email" placeholder="Введите свою почту">
-                    <span class="popup__error">Неправильный формат email</span>
-                </label>
-                <label for="password" class="popup__label">Пароль
-                    <input type="password" class="popup__input" name="password" id="password" placeholder="Введите пароль">
-                    <span class="popup__error">Неправильный формат пароля</span>
-                </label>
-                <label for="name" class="popup__label">Имя
-                    <input type="text" class="popup__input" name="name" id="name" placeholder="Введите своё имя">
-                    <span class="popup__error">&nbsp;</span>
-                </label>
-
-                <span class="popup__error popup__error_geometry">Такой пользователь уже есть</span>
-                <button class="button button_disabled popup__button" type="submit">Зарегистрироваться</button>
-            </form>
-            <span class="popup__text">или <a href="#" class="link popup__link">Войти</a></span>
-        </div>
-    </div>
 
 <!-- Подключение js файла -->
 <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>

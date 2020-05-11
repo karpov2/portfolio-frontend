@@ -7,6 +7,6 @@
     object-fit: contain;
 }
 
-.link_border:hover .link__img {
+.button_border:hover .link__img {
     fill: var(--header-link-color-hover);
 }

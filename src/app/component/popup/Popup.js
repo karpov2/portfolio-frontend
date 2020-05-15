@@ -8,6 +8,8 @@ export class Popup {
 
         // Биндим метод закрытия popup окна
         this.callbackClose = this.close.bind(this);
+
+        this.test = false;
     }
 
     // Открыть popup
@@ -50,6 +52,8 @@ export class Popup {
             // и клавиша 'Escape'
             if (event['code' || 'key'] === 'Escape') return remove()
         }
+
+        this.test = !this.test;
     }
 
     // Регистрация

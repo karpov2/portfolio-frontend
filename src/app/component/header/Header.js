@@ -14,16 +14,14 @@ export class Header {
         })
     }
 
-
-
-    signup() {
-        const open = (event) => {
+    viewPopup(props) {
+        const open = () => {
             // Если popup уже создан, пропускаем создание
             if (!this.Popup.elementPopup) {
                 // Создаем popup
                 this.authorization.insertAdjacentHTML(
                     'afterend',
-                    this.Popup.viewSignup()
+                    props.view()
                 )
             }
 
@@ -35,22 +33,15 @@ export class Header {
         this.Event.addEvent(this.authorization, 'click', open)
     }
 
+    signup() {
+        this.viewPopup({view: this.Popup.viewSignup})
+    }
+
     signin() {
-        const open = (event) => {
-            // Если popup уже создан, пропускаем создание
-            if (!this.Popup.elementPopup) {
-                // Создаем popup
-                this.authorization.insertAdjacentHTML(
-                    'afterend',
-                    this.Popup.viewSignin()
-                )
-            }
+        this.viewPopup({view: this.Popup.viewSignin})
+    }
 
-            // Открываем popup
-            this.Popup.open()
-        }
-
-        // Добавляем слушатель на кнопку авторизации для открытия popup окна
-        this.Event.addEvent(this.authorization, 'click', open)
+    test() {
+        console.log(this.Popup.test)
     }
 }

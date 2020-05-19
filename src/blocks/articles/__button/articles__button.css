@@ -12,3 +12,7 @@
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 .2em 1em -.4em rgba(8, 29, 45, .1);
 }
+
+.articles__button_none {
+    display: none;
+}

@@ -1,0 +1,17 @@
+@import url(_geometry/button__img_geometry.css);
+
+.button__img {
+    --link-exit-size: 1em;
+    width: var(--link-exit-size);
+    height: var(--link-exit-size);
+    object-fit: contain;
+    fill: var(--header-link-color);
+}
+
+.button_border:hover .button__img {
+    fill: var(--header-link-color-hover);
+}
+
+.button__img_none {
+    display: none;
+}

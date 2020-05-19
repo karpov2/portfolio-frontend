@@ -4,9 +4,8 @@
 
 import '../pages/article.css';
 import shave from 'shave';
-import { Header } from './component/header/Header.js'
-import { Event } from './component/event/Event.js'
-// import { Post } from './component/post/post.js'
+import { Header } from './component/Header.js'
+import { Event } from './component/Event.js'
 
 /**
  * Подключение компонентов
@@ -15,8 +14,15 @@ import { Event } from './component/event/Event.js'
 // const post = new Post(document.querySelectorAll('.post__description'));
 const posts = document.querySelectorAll('.post__description');
 
+const event = new Event();
+
 const header = new Header({
-    link: '.header__link-wrapper'
+    Event: event,
+    link: '.header__link-wrapper',
+    authorization: '#header-authorization',
+    authorizationText: '.button__text',
+    authorizationName: 'Авторизация',
+    icon: '.button__img'
 });
 
 // Перебирает каждую статью и если текст (description) больше доступной высоты, текст обрезается
@@ -54,10 +60,9 @@ const ellipsis = () => {
  * Подключение событий
  */
 
-const event = new Event();
-
 event.addEvent(window, 'load', [
     header.activeLink(),
+    header.authorizationBtn(),
     ellipsis()
 ])
 

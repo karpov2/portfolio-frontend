@@ -40,7 +40,7 @@
     /* Максимальная ширина контейнера */
     --search-container-maxsize: 530px;
 
-    /* Articles */
+    /* Article */
     /* Отступ контейнера */
     --articles-wrapper-geometry: 2.5em;
 }

@@ -1,6 +1,6 @@
-@import url(./popup__error_geometry.css);
+@import url(./form__error_geometry.css);
 
-.popup__error {
+.form__error {
     font-family: Inter, Arial, sans-serif;
     font-weight: normal;
     line-height: 1.3;

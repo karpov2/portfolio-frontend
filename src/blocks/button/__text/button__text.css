@@ -1,7 +1,5 @@
-.link {
+.button__text {
     font-family: Roboto, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.3;
-    cursor: pointer;
-    text-decoration: none;
 }

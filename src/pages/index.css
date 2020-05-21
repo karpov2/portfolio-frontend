@@ -17,7 +17,7 @@
 @import url(../blocks/preloader/preloader.css);
 @import url(../blocks/not-found/not-found.css);
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/overlay/overlay.css);
+@import url(../blocks/form/form.css);
 
 .index {
     /* Header */
@@ -42,7 +42,7 @@
     /* Максимальная ширина контейнера */
     --search-container-maxsize: 608px;
 
-    /* Articles */
+    /* Article */
     /* Отступ контейнера */
     --articles-wrapper-geometry: 5em;
 

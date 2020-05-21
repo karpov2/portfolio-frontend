@@ -3,3 +3,7 @@
     align-items: center;
     position: relative;
 }
+
+.header__link-wrapper_none {
+    display: none;
+}

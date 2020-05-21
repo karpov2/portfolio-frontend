@@ -5,6 +5,8 @@ export class Form {
         this.Event = props.event;
         // Класс Article
         this.Article = props.article;
+        // Класс Post
+        this.Post = props.post;
         // Класс Api
         this.MainApi = props.mainApi;
         // Состояние формы (регистрация или авторизация)
@@ -54,7 +56,9 @@ export class Form {
                         if (res.message === 'Вход успешно выполнен') {
                             console.log('res.user: ', res.user);
                             this.Popup.close(event, true);
-                            this.Header.viewExitButton(res.user.name);
+                            this.Header.signin();
+                            this.Post.noTooltipMessage();
+                            this.Article.addPost();
                         } else if (res.error) {
                             console.error('res.error: ', res.error);
                         }

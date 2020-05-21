@@ -1,7 +1,8 @@
 export class NewsApi {
     getNews(keyword, pageNum) {
+        const proxy = 'http://cors-anywhere.herokuapp.com/';
         // Ссылка на api с новосятми
-        const url = 'http://newsapi.org/v2/everything';
+        const url = 'https://newsapi.org/v2/everything';
         // Текст запроса
         const q = `q=${keyword}`;
         /**
@@ -26,7 +27,7 @@ export class NewsApi {
         // api ключ для запроса
         const apiKey = 'apiKey=1806c7549b12494a803f295331d677c4';
 
-        return fetch(`${url}?${q}&${from}&${to}&${sortBy}&${pageSize}&${page}&${apiKey}`)
+        return fetch(`${proxy}${url}?${q}&${from}&${to}&${sortBy}&${pageSize}&${page}&${apiKey}`)
             .then(post => post.json())
     }
 }

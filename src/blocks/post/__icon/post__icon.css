@@ -5,13 +5,33 @@
     height: 2.5em;
     padding: .6em;
     box-sizing: border-box;
-    fill: var(--color-assistant);
+    /*fill: transparent;*/
+    /*stroke: var(--color-assistant);*/
 }
 
-.post__btn:hover .post__icon {
+.post__btn:hover .post__icon_delete:not(.post__btn_delete-active) {
     fill: var(--color-main);
 }
 
-.post__btn:active .post__icon {
+.post__icon_delete {
+    fill: var(--color-assistant);
+}
+
+.post__btn_delete-active {
     fill: var(--color-event);
+    /*stroke: var(--color-event);*/
+}
+
+.post__btn:hover .post__icon_flag:not(.post__btn_flag-active) {
+    stroke: var(--color-main);
+}
+
+.post__icon_flag {
+    fill: transparent;
+    stroke: var(--color-assistant);
+}
+
+.post__btn_flag-active {
+    fill: var(--color-event);
+    stroke: var(--color-event);
 }

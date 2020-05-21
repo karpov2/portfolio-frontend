@@ -16,7 +16,7 @@ import { Article } from './component/Article.js';
 import { Post } from './component/Post.js';
 
 // Константы
-import { search, forms, popups, headers, articles } from './constants/dom.js';
+import { search, forms, popups, headers, articles, posts } from './constants/dom.js';
 
 /**
  * Подключение компонентов
@@ -25,14 +25,16 @@ import { search, forms, popups, headers, articles } from './constants/dom.js';
 const newsApi = new NewsApi();
 const mainApi = new MainApi();
 const event = new Event();
-const post = new Post();
-const article = new Article({event, newsApi, post, articles});
-const form = new Form({event, forms, search, article, mainApi});
+const post = new Post({posts, mainApi});
+const article = new Article({event, newsApi, mainApi, post, articles, posts});
+const form = new Form({event, forms, search, article, mainApi, post});
 const popup = new Popup({event, form, popups})
-const header = new Header({event, popup, headers, mainApi});
+const header = new Header({event, popup, headers, mainApi, post});
 
 form.Popup = popup;
 form.Header = header;
+article.Header = header;
+post.Header = header;
 
 /**
  * Подключение событий
@@ -40,6 +42,6 @@ form.Header = header;
 
 event.addEvent(window, 'load', [
     header.activeLink(),
-    header.authorizationBtn(),
+    header.signin(),
     form.search()
 ])

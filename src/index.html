@@ -9,7 +9,7 @@
     <meta name="description" content="Сервис, в котором можно найти новости по запросу и сохранить в личном кабинете">
     <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon-32x32.png')%>">
     <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon-16x16.png')%>">
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
     <title>Поиск новостей</title>
 </head>
 
@@ -43,6 +43,9 @@
                 <nav class="header__menu">
                     <div class="header__link-wrapper header__link-geometry">
                         <a href="/" class="link header__link">Главная</a>
+                    </div>
+                    <div class="header__link-wrapper header__link-geometry header__link-wrapper_none">
+                        <a href="/article.html" class="link header__link">Сохранённые статьи</a>
                     </div>
 
                     <button type="button" id="header-authorization" class="button button_border header__link-geometry header__link">
